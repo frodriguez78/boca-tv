@@ -1,4 +1,5 @@
 
+
 // Menú hamburguesa con animación + accesibilidad
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -34,7 +35,7 @@ const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
 
 function showError(inputId, message) {
-  const small = document.querySelector(.error[data-for="${inputId}"]);
+  const small = document.querySelector(`.error[data-for="${inputId}"]`);
   if (small) small.textContent = message || '';
 }
 
@@ -65,7 +66,6 @@ form.addEventListener('submit', (e) => {
 // Mejor UX: cerrar el menú si se expande y se redimensiona a desktop
 window.addEventListener('resize', () => {
   if (window.innerWidth > 760) {
-    // Asegura que el menú esté visible en desktop sin animación móvil
     navLinks.classList.remove('is-open');
     hamburger.classList.remove('is-open');
     hamburger.setAttribute('aria-expanded', 'false');
