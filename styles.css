@@ -176,19 +176,47 @@ input:focus, textarea:focus{ border-color:var(--bocadorado); box-shadow:0 0 0 .7
 
 @media (max-width: 760px){
   .hamburger{ display:block; }
-  .nav{ position:absolute; top:var(--header-h); left:0; right:0; }
-  .nav-links{
-    display:block; background:rgba(10,12,18,.95); backdrop-filter:saturate(150%) blur(8px);
-    border-bottom:1px solid var(--ring);
-    max-height:0; overflow:hidden; transition:max-height .3s ease;
+
+  .nav{
+    position:absolute;
+    top:var(--header-h);
+    left:0;
+    right:0;
+    z-index: 1001; /* asegura que quede por encima del contenido */
   }
-  .nav-links.is-open{ max-height:240px; }
-  .nav-links li{ border-top:1px solid var(--ring); }
-  .nav-links a{ display:block; padding:14px 16px; }
 
-  /* Novedades a 1 columna en mobile */
+  /* Aumentamos especificidad: .nav .nav-links */
+  .nav .nav-links{
+    display:flex;               /* sigue siendo flex, pero en columna */
+    flex-direction: column;     /* <-- vertical */
+    gap:0;                      /* sin espacio entre ítems */
+    background: rgba(10,12,18,.95);
+    backdrop-filter: saturate(150%) blur(8px);
+    border-bottom: 1px solid var(--ring);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+
+  /* altura suficiente para mostrar todos los links */
+  .nav .nav-links.is-open{
+    max-height: 320px;          /* ajusta si agregas más items */
+  }
+
+  .nav .nav-links li{
+    border-top: 1px solid var(--ring);
+    list-style: none;
+  }
+
+  .nav .nav-links a{
+    display:block;              /* ocupa todo el ancho */
+    width:100%;
+    padding:14px 16px;
+    text-decoration:none;
+  }
+
+  /* Resto del responsive */
   .novedades-wrap{ grid-template-columns: 1fr; }
-
   .cards{ grid-template-columns:1fr; }
   .series-grid{ grid-template-columns:repeat(2,1fr); }
 }
