@@ -72,7 +72,7 @@ Diseño responsivo
 Cómo ejecutar el proyecto
 
 Clonar o descargar el repositorio:
-git clone https://github.com/usuario/TurbiTV.git
+git clone https://github.com/frodriguez78/turbi-tv.git
 Abrir el archivo index.html directamente en tu navegador.
 
 Detalles técnicos destacados
