@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BocaTv</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:," />
+</head>
+<body>
+  <!-- Contenedor raíz para sticky footer -->
+  <div class="page">
+    <!-- Header fijo -->
+    <header class="header" id="top">
+      <div class="brand">
+        <!-- Reemplaza imagen.jpg por tu logo -->
+        <a href="#top" class="logo-wrap" aria-label="Inicio">
+          <img src="imagen.jpg" alt="Logo" class="logo" />
+        </a>
+        <span class="site-name">Mi Plataforma</span>
+      </div>
+
+      <!-- Botón hamburguesa (visible en mobile) -->
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <!-- Navegación -->
+      <nav class="nav">
+        <ul id="navLinks" class="nav-links">
+          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#tendencias">Tendencias</a></li>
+          <li><a href="#series">Series</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main">
+      <!-- NOVEDADES -->
+      <section id="novedades" class="section novedades" aria-labelledby="novedades-title">
+        <h2 id="novedades-title" class="section-title">Novedades</h2>
+        <div class="novedades-wrap">
+          <!-- Puedes reemplazar por <video> si deseas -->
+          <figure class="novedad-media">
+            <img
+              src= "img/rocky.jpg"
+              alt="Poster Rocky"
+              class="media"
+              loading="lazy"
+            />
+          </figure>
+          <div class="novedad-info">
+            <h3 class="novedad-title">La Sombra del Tiempo</h3>
+            <p class="novedad-desc">
+              Un thriller de ciencia ficción donde un grupo de investigadores
+              descubre un patrón temporal capaz de cambiar el destino de la humanidad.
+            </p>
+            <ul class="tags">
+              <li>Intriga</li>
+              <li>Sci-Fi</li>
+              <li>Misterio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TENDENCIAS -->
+      <section id="tendencias" class="section tendencias" aria-labelledby="tendencias-title">
+        <h2 id="tendencias-title" class="section-title">Tendencias</h2>
+        <div class="cards">
+          <!-- Card 1 -->
+          <article class="card">
+            <span class="badge">#1</span>
+            <img
+              src="./img/ElPadrino.jpg"
+              alt="El Padrino"
+              class="card-img"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Horizonte Rojo</h3>
+              <a class="btn" href="https://www.youtube.com/watch?v=5GgH2QRzy_A" target="_blank" rel="noopener">
+                Ver Trailer
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <span class="badge">#2</span>
+            <img
+              src="./img/LosCazafantasma.jpg"
+              alt="Cazafantasmas"
+              class="card-img"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Los Cazafantasmas</h3>
+              <a class="btn" href="https://www.youtube.com/watch?v=L_BFaVP1qiw" target="_blank" rel="noopener">
+                Ver Trailer
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <span class="badge">#3</span>
+            <img
+              src="https://images.unsplash.com/photo-1485841890310-6a055c88698a?q=80&w=1000&auto=format&fit=crop"
+              alt="Serie 3"
+              class="card-img"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Ruta 7</h3>
+              <a class="btn" href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank" rel="noopener">
+                Ver Trailer
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SERIES (dos subsecciones, cada una con 4 ítems) -->
+      <section id="series" class="section series" aria-labelledby="series-title">
+        <h2 id="series-title" class="section-title">Series</h2>
+
+        <h3 class="subsection-title">Series — Acción</h3>
+        <div class="series-grid">
+          <a class="serie" href="https://www.youtube.com/watch?v=2ZIpFytCSVc" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1525164286258-3012d0d3d8c6?q=80&w=800&auto=format&fit=crop" alt="Acción 1" loading="lazy" />
+            <span>Fuego Urbano</span>
+          </a>
+          <a class="serie" href="https://www.youtube.com/watch?v=EXeTwQWrcwY" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=800&auto=format&fit=crop" alt="Acción 2" loading="lazy" />
+            <span>Noche Blindada</span>
+          </a>
+          <a class="serie" href="https://www.youtube.com/watch?v=6ZfuNTqbHE8" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=800&auto=format&fit=crop" alt="Acción 3" loading="lazy" />
+            <span>Vector</span>
+          </a>
+          <a class="serie" href="https://www.youtube.com/watch?v=TYMMOjBUPMM" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" alt="Acción 4" loading="lazy" />
+            <span>Rescate Final</span>
+          </a>
+        </div>
+
+        <h3 class="subsection-title">Series — Comedia</h3>
+        <div class="series-grid">
+          <a class="serie" href="https://www.youtube.com/watch?v=J---aiyznGQ" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=800&auto=format&fit=crop" alt="Comedia 1" loading="lazy" />
+            <span>Vecinos al Límite</span>
+          </a>
+          <a class="serie" href="https://www.youtube.com/watch?v=DLzxrzFCyOs" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1520975922430-ae6f4f07a443?q=80&w=800&auto=format&fit=crop" alt="Comedia 2" loading="lazy" />
+            <span>Risas & Cía</span>
+          </a>
+          <a class="serie" href="https://www.youtube.com/watch?v=9bZkp7q19f0" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop" alt="Comedia 3" loading="lazy" />
+            <span>Mate en Casa</span>
+          </a>
+          <a class="serie" href="https://www.youtube.com/watch?v=tVj0ZTS4WF4" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1544551763-7ef038b5fa2a?q=80&w=800&auto=format&fit=crop" alt="Comedia 4" loading="lazy" />
+            <span>Club del Parque</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section contacto" aria-labelledby="contacto-title">
+        <h2 id="contacto-title" class="section-title">Contacto</h2>
+        <form class="form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+            <small class="error" data-for="name"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+            <small class="error" data-for="email"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+            <small class="error" data-for="message"></small>
+          </div>
+
+          <button type="submit" class="btn">Enviar</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer pegado abajo -->
+    <footer class="footer">
+      <p>Eleana Chourio — 2025</p>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
